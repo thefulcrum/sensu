@@ -1,21 +1,12 @@
-# Put files/directories that should be ignored in this file when uploading
-# to a chef-server or supermarket.
+# Put files/directories that should be ignored in this file.
 # Lines that start with '# ' are comments.
 
-# OS generated files #
-######################
+## OS
 .DS_Store
 Icon?
 nohup.out
-ehthumbs.db
-Thumbs.db
 
-# SASS #
-########
-.sass-cache
-
-# EDITORS #
-###########
+## EDITORS
 \#*
 .#*
 *~
@@ -31,72 +22,35 @@ tmtags
 .settings
 mkmf.log
 
-## COMPILED ##
-##############
+## COMPILED
 a.out
 *.o
 *.pyc
 *.so
-*.com
-*.class
-*.dll
-*.exe
-*/rdoc/
 
-# Testing #
-###########
-.watchr
-.rspec
-spec/*
-spec/fixtures/*
-test/*
-features/*
-examples/*
-Guardfile
-Procfile
-.kitchen*
-.rubocop.yml
-spec/*
-Rakefile
-.travis.yml
-.foodcritic
-.codeclimate.yml
-
-# SCM #
-#######
-.git
-*/.git
-.gitignore
-.gitmodules
-.gitconfig
-.gitattributes
-.svn
+## OTHER SCM
 */.bzr/*
 */.hg/*
 */.svn/*
 
-# Berkshelf #
-#############
+## Don't send rspecs up in cookbook
+.watchr
+.rspec
+spec/*
+spec/fixtures/*
+features/*
+
+## SCM
+.gitignore
+
+# Berkshelf
 Berksfile
 Berksfile.lock
 cookbooks/*
-tmp
 
-# Cookbooks #
-#############
-CONTRIBUTING*
-CHANGELOG*
-TESTING*
-MAINTAINERS.toml
-
-# Strainer #
-############
-Colanderfile
-Strainerfile
-.colander
-.strainer
-
-# Vagrant #
-###########
+# Vagrant
 .vagrant
-Vagrantfile
+
+# test-kitchen
+.kitchen
+.kitchen*.yml*

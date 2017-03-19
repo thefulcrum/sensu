@@ -1,4 +1,8 @@
 actions :create, :delete
-default_action :create
 
 attribute :content, :required => true
+
+def initialize(*args)
+  super
+  @action = :create
+end

@@ -1,5 +1,4 @@
 actions :create, :create_if_missing, :delete
-default_action :create
 
 attribute :asset_directory,    :kind_of => String
 attribute :cookbook,           :kind_of => String
@@ -11,3 +10,8 @@ attribute :mode,               :kind_of => String, :default => '0755'
 attribute :owner,              :kind_of => String
 attribute :group,              :kind_of => String, :default => 'sensu'
 attribute :rights,             :kind_of => String
+
+def initialize(*args)
+  super
+  @action = :create
+end

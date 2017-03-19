@@ -18,5 +18,6 @@
 #
 
 sensu_service "sensu-api" do
+  init_style node.sensu.init_style
   action [:enable, :start]
 end
