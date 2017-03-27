@@ -1,7 +1,6 @@
-
 #
 # Cookbook Name:: sensu
-# Recipe:: api_service
+# Recipe:: client_service
 #
 # Copyright 2014, Sonian Inc.
 #
@@ -18,6 +17,19 @@
 # limitations under the License.
 #
 
-sensu_service "sensu-api" do
-  action [:enable, :start]
+sensu_service "sensu-client" do
+ init_style node.sensu.init_style
+ action [:enable, :start]
 end
+
+# service_actions = case node['platform_family']
+# when 'aix'
+#   [:start]
+# else
+#   [:enable, :start]
+# end
+
+
+# sensu_service "sensu-client" do
+#   action service_actions
+# end

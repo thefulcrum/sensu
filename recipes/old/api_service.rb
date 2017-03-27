@@ -1,4 +1,3 @@
-
 #
 # Cookbook Name:: sensu
 # Recipe:: api_service
@@ -19,5 +18,7 @@
 #
 
 sensu_service "sensu-api" do
+  init_style node.sensu.init_style
   action [:enable, :start]
+  ignore_failure true
 end
