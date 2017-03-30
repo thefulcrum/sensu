@@ -30,7 +30,7 @@ default["sensu"]["client_deregister_on_stop"] = false
 default["sensu"]["client_deregister_handler"] = nil
 
 default["sensu"]["apt_repo_url"] = "https://sensu.global.ssl.fastly.net/apt"
-default["sensu"]["yum_repo_url"] = "https://sensu.global.ssl.fastly.net/apt"
+default["sensu"]["yum_repo_url"] = "https://sensu.global.ssl.fastly.net/yum"
 default["sensu"]["msi_repo_url"] = "http://repositories.sensuapp.org/msi"
 default["sensu"]["aix_package_root_url"] = "https://sensu.global.ssl.fastly.net/aix"
 default["sensu"]["add_repo"] = true
