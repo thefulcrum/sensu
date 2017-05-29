@@ -17,7 +17,7 @@ else
 end
 
 # installation
-default["sensu"]["version"] = "0.20.0-1"
+default["sensu"]["version"] = "0.29.0-11"
 default["sensu"]["version_suffix"] = nil
 default["sensu"]["use_unstable_repo"] = false
 default["sensu"]["log_level"] = "info"
